@@ -1,5 +1,9 @@
 # JNITrace EX Changelog
 
+## 1.0.1
+
+- **Frida 17 fix** – Patched jnitrace-engine to fix "TypeError: not a function" when running with Frida 17.x: lazy-require of `JavaVMInterceptor` inside `run()` to avoid circular dependency, and use of `Module.findGlobalExportByName()` for dlopen/dlsym/dlclose (replacing deprecated `findExportByName(null, …)`). Applied via `patches/jnitrace-engine+1.1.1.patch`.
+
 ## 1.0.0
 
 First stable release of JNITrace EX (maintained fork of [chame1eon/jnitrace](https://github.com/chame1eon/jnitrace)).

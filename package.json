@@ -6,6 +6,7 @@
   "main": "jnitrace/src/main.js",
   "scripts": {
     "prepare": "npm run build",
+    "postinstall": "patch-package",
     "build": "frida-compile jnitrace/src/main.ts -o jnitrace/build/jnitrace.js -c",
     "watch": "frida-compile jnitrace/src/main.ts -o jnitrace/build/jnitrace.js -cw",
     "lint": "eslint jnitrace/src/**/*.ts"

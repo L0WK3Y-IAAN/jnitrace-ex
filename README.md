@@ -51,6 +51,7 @@ cd /path/to/jnitrace-ex
 - `bad interpreter: ... python3.14: no such file or directory` – Recreate the venv with a Python that stays in the same place, or run: `.venv/bin/python3 -m jnitrace.jnitrace ...`
 - `ModuleNotFoundError: No module named 'frida'` – Install Frida for that interpreter: `pip install frida`, or use the same Python as `frida-tools`.
 - `ModuleNotFoundError: No module named 'jnitrace'` – From repo root run `.venv/bin/pip install -e .`, or use `./scripts/jnitrace.sh` (no install needed).
+- **`TypeError: not a function` in jnitrace-engine** – Try running from source so the Frida script is built with your environment: clone the repo, then `./scripts/jnitrace.sh -l lib.so -b none com.example.app`. If that works, reinstall from PyPI (`pip install --force-reinstall jnitrace-ex`) to get a fresh build, or use the run-from-source method.
 
 **Dependencies:**
 
