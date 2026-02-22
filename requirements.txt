@@ -1,0 +1,7 @@
+frida>=16.0.0
+colorama
+hexdump
+importlib_resources>=3.0.0
+importlib_metadata>=3.0.0
+
+pylint
