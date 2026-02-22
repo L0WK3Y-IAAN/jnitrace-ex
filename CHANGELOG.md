@@ -1,4 +1,20 @@
-# jnitrace Change Log
+# JNITrace EX Changelog
+
+## 1.0.0
+
+First stable release of JNITrace EX (maintained fork of [chame1eon/jnitrace](https://github.com/chame1eon/jnitrace)).
+
+- **Frida 16 & 17 support** – Uses `Module.findGlobalExportByName()` for Frida 17 compatibility (replacing deprecated `findExportByName(null, …)` in jnitrace-engine).
+- **Python 3.7+** – Modern packaging with `importlib_metadata` and `importlib_resources` (no `pkg_resources`).
+- **Stable terminal output** – Unbuffered stdout and flushes so trace output appears in real time without `adb logcat`.
+- **Run from source** – `./scripts/jnitrace.sh` runs from the repo using the project venv and `PYTHONPATH`, no global install required.
+
+**Install:** `pip install jnitrace-ex`  
+**Requirements:** Python 3.7+, Frida 16+; device with frida-server 16.x or 17.x.
+
+---
+
+# jnitrace Change Log (upstream)
 
 ## 3.3.1
 - Bumped dependencies that had been detected to have security vulnerabilities

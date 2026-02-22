@@ -11,6 +11,8 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     environment: pypi  # optional; recommended for protection rules
+    permissions:
+      id-token: write  # required for PyPI trusted publishing (OIDC)
     steps:
       - uses: actions/checkout@v4
 
